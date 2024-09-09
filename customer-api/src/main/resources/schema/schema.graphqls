@@ -1,0 +1,16 @@
+
+#### Workshop Task1 add query to search for customers by firstname ####
+type Query {
+    customer(idFilter: Int): Customer
+}
+
+type Customer @key(fields: "id") {
+    id: ID
+    title: String
+    firstname: String
+    lastname: String
+    emailAddress: String
+}
+
+#### Workshop Task2 add a Vehicle Type and associate to the Customer ####
+#### Add the fields: id: Int!, make: String, model: String

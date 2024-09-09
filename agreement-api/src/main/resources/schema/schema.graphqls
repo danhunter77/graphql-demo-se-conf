@@ -1,0 +1,19 @@
+scalar Date
+
+#### Workshop Task3 add an Agreement Type amd Query ####
+type Query {
+    agreement(id: Int): Agreement
+}
+
+#### Add the fields: id: Int!, startDate: Date, endDate: Date, active: Boolean
+type Agreement {
+    id: Int!
+    startDate: Date
+    endDate: Date
+    active: Boolean
+}
+
+type Customer @key(fields: "id") @extends {
+    id: ID @external
+    agreements: [Agreement]
+}
